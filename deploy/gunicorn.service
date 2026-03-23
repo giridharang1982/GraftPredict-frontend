@@ -1,0 +1,13 @@
+[Unit]
+Description=Gunicorn instance to serve graftpredict
+After=network.target
+
+[Service]
+User=www-data
+Group=www-data
+WorkingDirectory=/var/www/graftpredict
+Environment="PATH=/var/www/graftpredict/venv/bin"
+ExecStart=/var/www/graftpredict/venv/bin/gunicorn -w 3 -b 127.0.0.1:8000 wsgi:app
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,7 @@
+{
+    "builder.serverUrl": "http://localhost:5000",
+    "builder.command": "{\"absoluteHtml\":{\"id\":\"4b33t9cvsc3mk3w0a0t\",\"url\":\"https://api.builder.io/api/v1/file/assets/TEMP/4b33t9cvsc3mk3w0a0t\",\"fileName\":\".figma-design-1767782416061-3cn7pkb.figma.html\",\"fileType\":\"text/plain\",\"size\":29140},\"imageData\":[{\"id\":\"a20363ba155850d4c07d5779bc3c2841cf304528\",\"url\":\"https://api.builder.io/api/v1/image/assets/TEMP/a20363ba155850d4c07d5779bc3c2841cf304528\",\"fileType\":\"image/jpeg\",\"size\":520809}],\"vcpImportId\":\"vcp-26f7b40265e14b768bd963f9a4939451\"}",
+    "builder.runDevServer": false,
+    "builder.autoDetectDevServer": true,
+    "builder.launchType": "editor"
+}
