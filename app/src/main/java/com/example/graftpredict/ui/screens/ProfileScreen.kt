@@ -217,8 +217,7 @@ fun ProfileScreen(
     onLogout: () -> Unit = {},
     onHomeClick: () -> Unit = {},
     onReportClick: () -> Unit = {},
-    onNavigateToLogin: () -> Unit = {},
-    onHelpClick: () -> Unit = {}
+    onNavigateToLogin: () -> Unit = {}
 ) {
     val context = LocalContext.current
     val sessionManager = remember(context) { SessionManager(context) }
@@ -911,37 +910,7 @@ fun ProfileScreen(
                         onToggle = { notificationsEnabled = !notificationsEnabled }
                     )
 
-                    // Help & Support row
-                    Row(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(16.dp)
-                            .clickable { onHelpClick() },
-                        verticalAlignment = Alignment.CenterVertically
-                    ) {
-                        IconContainer(
-                            icon = Icons.Outlined.Help,
-                            iconColor = indigo400,
-                            backgroundColor = indigo900Alpha20
-                        )
 
-                        Spacer(modifier = Modifier.width(16.dp))
-
-                        Text(
-                            text = "Help & Support",
-                            fontSize = 14.sp,
-                            fontWeight = FontWeight.Bold,
-                            color = white,
-                            modifier = Modifier.weight(1f)
-                        )
-
-                        Icon(
-                            Icons.Outlined.ChevronRight,
-                            contentDescription = "Chevron",
-                            tint = gray600,
-                            modifier = Modifier.size(20.dp)
-                        )
-                    }
 
                     // Log Out Button
                     Box(
@@ -1405,6 +1374,37 @@ fun NotificationsCard(
                 }
             }
 
+            // Help & Support row
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(16.dp)
+                    .clickable { /* TODO: Add help click */ },
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                IconContainer(
+                    icon = Icons.Outlined.Help,
+                    iconColor = indigo400,
+                    backgroundColor = indigo900Alpha20
+                )
+
+                Spacer(modifier = Modifier.width(16.dp))
+
+                Text(
+                    text = "Help & Support",
+                    fontSize = 14.sp,
+                    fontWeight = FontWeight.Bold,
+                    color = white,
+                    modifier = Modifier.weight(1f)
+                )
+
+                Icon(
+                    Icons.Outlined.ChevronRight,
+                    contentDescription = "Chevron",
+                    tint = gray600,
+                    modifier = Modifier.size(20.dp)
+                )
+            }
         }
     }
 }

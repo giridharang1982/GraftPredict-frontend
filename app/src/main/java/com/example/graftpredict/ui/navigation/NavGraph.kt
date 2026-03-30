@@ -135,8 +135,7 @@ fun AppNavGraph(navController: NavHostController, modifier: Modifier = Modifier,
                         // Clear entire back stack after account deletion so user can't go back
                         popUpTo(Destinations.Home) { inclusive = true }
                     }
-                },
-                onHelpClick = { navController.navigate(Destinations.HelpAndSupport) }
+                }
             ) 
         }
         composable(Destinations.Home) { 

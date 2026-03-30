@@ -932,13 +932,11 @@ fun ReportCard(
                     modifier = Modifier
                         .fillMaxWidth()
                         .padding(12.dp),
-                    horizontalArrangement = Arrangement.spacedBy(24.dp)
+                    horizontalArrangement = Arrangement.spacedBy(16.dp)
                 ) {
                     dataItems.forEachIndexed { index, (label, value) ->
-                        Row(
-                            modifier = Modifier.weight(1f),
-                            horizontalArrangement = Arrangement.spacedBy(8.dp),
-                            verticalAlignment = Alignment.CenterVertically
+                        Column(
+                            modifier = Modifier.weight(1f)
                         ) {
                             Text(
                                 text = label,
@@ -947,6 +945,7 @@ fun ReportCard(
                                 fontSize = 12.sp,
                                 color = textSecondary
                             )
+                            Spacer(modifier = Modifier.height(4.dp))
                             Text(
                                 text = value,
                                 fontFamily = Manrope,

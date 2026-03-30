@@ -20,6 +20,8 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.graftpredict.ui.theme.Manrope
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
 
 @Composable
 fun SentScreen(
@@ -639,6 +641,7 @@ fun SentReportCard(
     }
 }
 
+@Parcelize
 data class SentReport(
     val id: Int,
     val recipientName: String,
@@ -651,7 +654,7 @@ data class SentReport(
     val reportId: Int = 0,
     val fromEmail: String = "",
     val toEmail: String = ""
-)
+) : Parcelable
 
 // Preview for testing
 @Composable
