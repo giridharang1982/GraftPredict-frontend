@@ -14,7 +14,7 @@
 
     <!-- Development: allow cleartext for common 192.168.x.x IPs -->
     <domain-config cleartextTrafficPermitted="true">
-        <domain includeSubdomains="false">180.235.121.253</domain>
+        <domain includeSubdomains="false">192.168.0.7</domain>
 
     </domain-config>
 

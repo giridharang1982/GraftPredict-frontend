@@ -6,13 +6,13 @@ plugins {
 }
 
 android {
-    namespace = "com.example.graftpredict"
+    namespace = "com.simats.graftpredict"
     compileSdk {
         version = release(36)
     }
 
     defaultConfig {
-        applicationId = "com.example.graftpredict"
+        applicationId = "com.simats.graftpredict"
         minSdk = 30
         targetSdk = 36
         versionCode = 1
